@@ -3,6 +3,7 @@ import {Text, StyleSheet, View, TouchableOpacity, Image} from 'react-native';
 
 export default class Home extends React.Component {
   render() {
+    const {navigation} = this.props;
     return (
       <View style={styles.wrapper}>
         <View style={styles.container}>
@@ -16,9 +17,7 @@ export default class Home extends React.Component {
         <View style={styles.footer}>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => {
-              // this.props.navigation.navigate('Main');
-            }}>
+            onPress={() => navigation.navigate('Main')}>
             <Text style={styles.buttonText}>Continue</Text>
           </TouchableOpacity>
         </View>
@@ -55,15 +54,13 @@ const styles = StyleSheet.create({
     fontFamily: 'Helvetica',
   },
   footer: {
-    marginBottom: 50,
+    flexDirection: 'row',
   },
   button: {
     alignItems: 'center',
     justifyContent: 'center',
     flex: 1,
-    height: 50,
-    alignSelf: 'center',
-    elevation: 3,
+    height: 80,
   },
   buttonText: {
     textDecorationLine: 'underline',
