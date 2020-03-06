@@ -22,19 +22,11 @@ class Main extends Component {
 
     return (
       <SafeAreaView style={styles.wrapper}>
-        <View style={styles.viewBox}>
-          <TouchableOpacity
-            style={[styles.button, {backgroundColor: 'white'}]}
-            onPress={() => {
-              store.sortLocations();
-            }}>
-            <Text style={{fontSize: 16}}>Nearby</Text>
-          </TouchableOpacity>
-          <View style={styles.columnView}>
-            <Text style={styles.title}>Karma’s Stockholm office</Text>
-            <Text style={styles.subText}>Current Location</Text>
-          </View>
+        <View style={styles.columnView}>
+          <Text style={styles.title}>Karma’s Stockholm office</Text>
+          <Text>Current Location</Text>
         </View>
+
         <FlatList
           data={store.locations}
           style={styles.container}
@@ -89,7 +81,6 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    maxWidth: 250,
   },
   button: {
     alignItems: 'center',
@@ -108,10 +99,10 @@ const styles = StyleSheet.create({
     height: 1,
   },
   columnView: {
+    padding: 10,
     flexDirection: 'column',
-  },
-  subText: {
-    textAlign: 'right',
+    marginVertical: 6,
+    marginHorizontal: 8,
   },
   distance: {
     color: '#29ba7f',
