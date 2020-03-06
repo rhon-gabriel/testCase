@@ -20,7 +20,7 @@ export default class App extends React.Component {
               headerStyle: {
                 backgroundColor: '#fdd4ce',
               },
-              headerTintColor: '#3f494b',
+
               headerTitleAlign: 'left',
             }}>
             <Stack.Screen name="Home" component={Home} />

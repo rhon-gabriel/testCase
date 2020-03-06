@@ -19,7 +19,7 @@ class Home extends Component {
           <TouchableOpacity
             style={styles.button}
             onPress={() => navigation.navigate('Locations')}>
-            <Text style={styles.buttonText}>Continue</Text>
+            <Text style={styles.buttonText}>Check stores</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -47,27 +47,35 @@ const styles = StyleSheet.create({
   },
   title: {
     justifyContent: 'center',
-    fontSize: 24,
+    fontSize: 30,
     fontFamily: 'Helvetica',
-    marginTop: 20,
+    marginTop: 18,
+    color: '#ffffff',
+    fontWeight: 'bold',
   },
   subtitle: {
     justifyContent: 'center',
-    fontSize: 16,
+    fontSize: 20,
     fontFamily: 'Helvetica',
   },
   footer: {
     flexDirection: 'row',
+    justifyContent: 'center',
+    margin: 20,
   },
   button: {
     alignItems: 'center',
     justifyContent: 'center',
-    flex: 1,
     height: 80,
+    width: 300,
+    borderRadius: 38,
+    borderColor: '#ffffff',
+    borderWidth: 2,
   },
   buttonText: {
-    textDecorationLine: 'underline',
-    fontSize: 18,
+    fontSize: 24,
     fontFamily: 'Helvetica',
+    color: '#fe72a1',
+    fontWeight: 'bold',
   },
 });

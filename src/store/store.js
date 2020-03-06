@@ -1,4 +1,4 @@
-import {decorate, observable, action, toJS} from 'mobx';
+import {decorate, observable, action} from 'mobx';
 import fetch from 'node-fetch';
 import {getDistance} from 'geolib';
 
@@ -6,7 +6,10 @@ class Store {
   followed = false;
   locations = [];
   modifiedLocations = [];
-  distance;
+  position = {
+    name: 'Karma’s Stockholm office',
+    status: 'Current Location',
+  };
 
   constructor() {
     this.initialLoad();
@@ -72,13 +75,13 @@ class Store {
 
 decorate(Store, {
   initialLoad: action,
+  position: observable,
   followed: observable,
   locations: observable,
   getLocations: action,
   setLocations: action,
   setFollow: action,
   getDistances: action,
-  distance: observable,
 });
 
 export default new Store();
