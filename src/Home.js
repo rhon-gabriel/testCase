@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {Text, StyleSheet, View, TouchableOpacity, Image} from 'react-native';
+import {inject, observer} from 'mobx-react';
 
-export default class Home extends React.Component {
+class Home extends Component {
   render() {
     const {navigation} = this.props;
     return (
@@ -17,7 +18,7 @@ export default class Home extends React.Component {
         <View style={styles.footer}>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => navigation.navigate('Main')}>
+            onPress={() => navigation.navigate('Locations')}>
             <Text style={styles.buttonText}>Continue</Text>
           </TouchableOpacity>
         </View>
@@ -25,6 +26,8 @@ export default class Home extends React.Component {
     );
   }
 }
+
+export default inject('store')(observer(Home));
 
 const styles = StyleSheet.create({
   wrapper: {
