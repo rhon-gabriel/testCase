@@ -7,7 +7,7 @@ class Store {
   locations = [];
   modifiedLocations = [];
   position = {
-    name: 'Karma’s Stockholm office',
+    name: 'Home',
     status: 'Current Location',
   };
 

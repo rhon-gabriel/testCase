@@ -8,10 +8,10 @@ class Home extends Component {
     return (
       <View style={styles.wrapper}>
         <View style={styles.container}>
-          <Image style={styles.logo} source={{uri: 'https://bit.ly/3avPCca'}} />
+          <Image style={styles.logo} source={{uri: 'https://i.imgur.com/eIbZ1MF.png'}} />
           <View>
-            <Text style={styles.title}>Test Case</Text>
-            <Text style={styles.subtitle}>Rhoneil Gabriel</Text>
+            <Text style={styles.title}>PodStore</Text>
+            <Text style={styles.subtitle}>Follow your favourite store</Text>
           </View>
         </View>
 
@@ -19,7 +19,7 @@ class Home extends Component {
           <TouchableOpacity
             style={styles.button}
             onPress={() => navigation.navigate('Locations')}>
-            <Text style={styles.buttonText}>Check stores</Text>
+            <Text style={styles.buttonText}>Enter</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -52,10 +52,11 @@ const styles = StyleSheet.create({
     marginTop: 18,
     color: '#ffffff',
     fontWeight: 'bold',
+    textAlign: 'center'
   },
   subtitle: {
     justifyContent: 'center',
-    fontSize: 20,
+    fontSize: 18,
     fontFamily: 'Helvetica',
   },
   footer: {

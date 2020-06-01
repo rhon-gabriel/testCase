@@ -1,5 +1,3 @@
-# React Native / Android - Test Case
-
 ## Build with
 
 - React Native
