@@ -1,4 +1,4 @@
-##PodStore
+## PodStore
 This simple app display a list of stores, ordered from a selected location, in which users have the ability to follow. 
 
 ## Build with
